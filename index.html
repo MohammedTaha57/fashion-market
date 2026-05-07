@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Market</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:black;
+      color:white;
+    }
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      padding:25px 60px;
+      position:fixed;
+      width:100%;
+      background:rgba(0,0,0,0.7);
+      backdrop-filter:blur(10px);
+    }
+
+    nav h1{
+      letter-spacing:5px;
+    }
+
+    nav ul{
+      display:flex;
+      gap:30px;
+      list-style:none;
+    }
+
+    .hero{
+      height:100vh;
+      background:url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1800&auto=format&fit=crop') center/cover;
+      display:flex;
+      align-items:center;
+      padding:0 80px;
+    }
+
+    .overlay{
+      background:rgba(0,0,0,0.6);
+      position:absolute;
+      inset:0;
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      max-width:600px;
+    }
+
+    .hero h2{
+      font-size:70px;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      color:#ccc;
+      margin-bottom:30px;
+      line-height:1.6;
+    }
+
+    .btn{
+      padding:15px 35px;
+      background:white;
+      color:black;
+      border:none;
+      cursor:pointer;
+      font-weight:bold;
+      border-radius:50px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      transform:scale(1.05);
+    }
+
+    .products{
+      padding:100px 60px;
+    }
+
+    .products h3{
+      font-size:50px;
+      margin-bottom:50px;
+      text-align:center;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#111;
+      border-radius:20px;
+      overflow:hidden;
+      transition:0.4s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card img{
+      width:100%;
+      height:350px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:20px;
+    }
+
+    footer{
+      text-align:center;
+      padding:40px;
+      border-top:1px solid #222;
+      color:#777;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <h1>FASHION MARKET</h1>
+
+  <ul>
+    <li>Home</li>
+    <li>Collection</li>
+    <li>About</li>
+    <li>Contact</li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+    <h2>Premium Men's Fashion</h2>
+
+    <p>
+      Modern luxury fashion experience with premium styles,
+      clean aesthetics and elegant design.
+    </p>
+
+    <button class="btn">Explore Collection</button>
+  </div>
+</section>
+
+<section class="products">
+
+  <h3>Featured Collection</h3>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="card-content">
+        <h4>Luxury Jacket</h4>
+        <p>$149</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="card-content">
+        <h4>Modern Streetwear</h4>
+        <p>$99</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="card-content">
+        <h4>Premium Outfit</h4>
+        <p>$129</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2026 Fashion Market. All Rights Reserved.
+</footer>
+
+</body>
+</html>
